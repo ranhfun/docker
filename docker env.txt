@@ -20,3 +20,10 @@
 4. sudo yum install docker-ce
 5. sudo systemctl start docker
 6. sudo docker run hello-world
+
+7. docker pull mysql:5.7
+	 docker run --name logs-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=rootroot -d mysql:5.7		
+	 firewall-cmd --add-port=3306/tcp
+8. docker pull redis
+	 docker run --name logs-redis -p 6379:6379 -d redis redis-server --appendonly yes
+	 firewall-cmd --add-port=6379/tcp
