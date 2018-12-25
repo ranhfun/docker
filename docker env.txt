@@ -27,3 +27,6 @@
 8. docker pull redis
 	 docker run --name logs-redis -p 6379:6379 -d redis redis-server --appendonly yes
 	 firewall-cmd --add-port=6379/tcp
+	 
+9. docker pull java:8
+10. docker pull gradle

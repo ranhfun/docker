@@ -16,3 +16,4 @@
 	1).vi /etc/ssh/sshd_config
 		# PermitRootLogin yes (Original) 
 		PermitRootLogin yes (Now)
+5. yum install ansible
