@@ -24,3 +24,16 @@
 7. sudo systemctl enable docker
 
 8. sudo chkconfig docker on
+
+9. docker pull mysql:5.7
+	 docker run --name logs-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=rootroot -d mysql:5.7		
+	 firewall-cmd --add-port=3306/tcp
+10. docker pull redis
+	 docker run --name logs-redis -p 6379:6379 -d redis redis-server --appendonly yes
+	 firewall-cmd --add-port=6379/tcp
+	 
+11. docker pull java:8
+12. docker pull gradle
+
+13. sudo curl -L https://github.com/docker/compose/releases/download/1.23.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+	sudo chmod +x /usr/local/bin/docker-compose
